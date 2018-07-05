@@ -1,6 +1,12 @@
 ﻿cls
 
 # https://github.com/aikoncwd/vbs-ad-health-report
+# Need to ensure all scripts are sanitised before commit and push to GitHub. 
+# Standard script headers. 
+#
+# PS Profile project push
+# PS Projectes push  
+
 
 
 
