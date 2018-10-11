@@ -211,6 +211,35 @@ Get-Service -name ntds,adws,dns,dncache,kdc,w32time,netlogon,dhcpserver,dhcp -Co
 }
 }
 
+
+function Get-LoggedOnUser
+ {
+     [CmdletBinding()]
+     param
+     (
+         [Parameter()]
+         [ValidateScript({ Test-Connection -ComputerName $_ -Quiet -Count 1 })]
+         [ValidateNotNullOrEmpty()]
+         [string[]]$ComputerName = $env:COMPUTERNAME
+     )
+     foreach ($comp in $ComputerName)
+     {
+         $output = @{ 'ComputerName' = $comp }
+         $output.UserName = (Get-WmiObject -Class win32_computersystem -ComputerName $comp).UserName
+         [PSCustomObject]$output
+     }
+ }
+
+Function Test{
+
+
+Get-LoggedOnUser C7-Teacher
+
+}
+
+
+
+
 ###############################################################################################################
 #Script header
 ###############################################################################################################
@@ -231,6 +260,8 @@ Write-Host $Line
 
 
 
+
+
 ###############################################################################################################
 #Main script start
 ###############################################################################################################
@@ -242,4 +273,6 @@ ScriptHeader
 #CheckTest
 ListAllServersDetail
 #ServerServicesCheck
+#Test
 
+Get-LoggedOnUser ADMIN-ASM

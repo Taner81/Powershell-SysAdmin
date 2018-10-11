@@ -1,0 +1,1 @@
+﻿(Get-WmiObject Win32_Process -ComputerName TBHA-SL05 | ?{ $_.ProcessName -match "Pulsar.exe" }).Terminate()
