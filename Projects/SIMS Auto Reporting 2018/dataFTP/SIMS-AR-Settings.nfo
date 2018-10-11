@@ -1,0 +1,20 @@
+[General]
+Username=haslaict
+Password=Password
+
+[Locations]
+ReportName=UoBAT Dashboard - Attendance V1.4 16/17
+ReportName2=UoBAT Dashboard - Attendance V1.4 17/18
+ReportName3=UoBAT Dashboard - Attendance V1.4 18/19
+ReportName4=UoBAT Dashboard - Context report v1.4
+ReportName5=UoBAT Dashboard - Exclusion V1.5
+
+OutputFile=C:\dataFTP\Attendance16-17
+OutputFile2=C:\dataFTP\Attendance17-18
+OutputFile3=C:\dataFTP\Attendance18-19
+OutputFile4=C:\dataFTP\Context report
+OutputFile5=C:\dataFTP\Exclusion
+
+[Other]
+WaitForTime=20
+VerboseLogging=True
